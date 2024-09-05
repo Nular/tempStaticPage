@@ -1,0 +1,73 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>平方计算器</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: #f4f4f4;  
+            color: #333;  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh;  
+            margin: 0;  
+        }  
+        .container {  
+            background: white;  
+            padding: 20px;  
+            border-radius: 8px;  
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+        }  
+        h1 {  
+            margin-bottom: 20px;  
+            font-size: 24px;  
+            text-align: center;  
+        }  
+        input[type="number"] {  
+            padding: 10px;  
+            width: 100%;  
+            border: 1px solid #ccc;  
+            border-radius: 4px;  
+            margin-bottom: 10px;  
+            box-sizing: border-box;  
+        }  
+        button {  
+            background-color: #28a745;  
+            color: white;  
+            padding: 10px;  
+            border: none;  
+            border-radius: 4px;  
+            cursor: pointer;  
+            width: 100%;  
+            font-size: 16px;  
+        }  
+        button:hover {  
+            background-color: #218838;  
+        }  
+        #result {  
+            margin-top: 20px;  
+            font-weight: bold;  
+            text-align: center;  
+        }  
+    </style>  
+    <script>  
+        function calculateSquare() {  
+            const input = document.getElementById('numberInput').value;  
+            const number = parseFloat(input);  
+            const square = number * number;  
+            document.getElementById('result').innerText = `结果: ${square}`;  
+        }  
+    </script>  
+</head>  
+<body>  
+    <div class="container">  
+        <h1>平方计算器</h1>  
+        <input type="number" id="numberInput" placeholder="输入数字" />  
+        <button onclick="calculateSquare()">计算平方</button>  
+        <p id="result"></p>  
+    </div>  
+</body>  
+</html>
